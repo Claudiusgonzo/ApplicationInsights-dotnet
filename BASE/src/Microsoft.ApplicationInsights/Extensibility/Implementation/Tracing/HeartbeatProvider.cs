@@ -100,12 +100,12 @@
         /// </summary>
         public string InstrumentationKey
         {
-            get => this.telemetryClient?.InstrumentationKey;
+            get => this.telemetryClient?.Context.InstrumentationKey;
             set
             {
                 if (this.telemetryClient != null)
                 {
-                    this.telemetryClient.InstrumentationKey = value;
+                    this.telemetryClient.Context.InstrumentationKey = value;
                 }
             }
         }
